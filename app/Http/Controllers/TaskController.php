@@ -43,4 +43,12 @@ class TaskController extends Controller
         $task=DB::table('tasks')->where('id',$id)->update(['list'=>$request->list]);
         return redirect('task');
     }
+
+    public function destroy($id)
+    {
+        $task=DB::table('tasks')->where('id',$id)->delete();
+        // $task->delete();
+        return redirect('task');
+
+    }
 }

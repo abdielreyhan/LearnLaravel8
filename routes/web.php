@@ -37,6 +37,7 @@ Route::get('task',[TaskController::class,'index']);
 Route::post('task',[TaskController::class,'store']);
 Route::get('task/{id}/edit',[TaskController::class,'edit']);
 Route::put('task/{id}',[TaskController::class,'update']);
+Route::delete('task/{id}',[TaskController::class,'destroy']);
 
 
 // Route::view('contact','contact');
