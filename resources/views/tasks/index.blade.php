@@ -17,4 +17,4 @@
             </li>
         @endforeach
     </ol>
-</x-app-layout>   
+</x-app-layout>
