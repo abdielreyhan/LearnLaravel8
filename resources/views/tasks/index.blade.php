@@ -8,7 +8,13 @@
     </form>
     <ol>
         @foreach ($tasks as $index=>$task)
-            <li>{{ $task->list }} - <a style="color:red;" href="/task/{{ $task->id }}/edit">Edit</a></li>
+            <li>{{ $task->list }} - <a style="color:rgb(0, 38, 255);" href="/task/{{ $task->id }}/edit">Edit</a>-
+                <form action="/task/{{ $task->id }}" method="post" style="display: inline">
+                    @csrf
+                    @method('delete')
+                    <button style="color: red" type="submit">Delete</button>
+                </form>
+            </li>
         @endforeach
     </ol>
 </x-app-layout>   
